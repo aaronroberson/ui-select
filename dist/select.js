@@ -1205,7 +1205,7 @@ uis.directive('uiSelectMultiple', ['uiSelectMinErr','$timeout', function(uiSelec
         var removedChoice = $select.selected[index];
 
         // if the choice is locked, can't remove it
-        if(removedChoice._uiSelectChoiceLocked) return;
+        if(removedChoice && removedChoice._uiSelectChoiceLocked) return;
 
         var locals = {};
         locals[$select.parserResult.itemName] = removedChoice;
